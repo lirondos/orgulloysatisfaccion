@@ -3,8 +3,8 @@ import re
 import time
 
 def guardar(year, texto):
-	mifichero = open(year + '.txt', 'w', encoding='utf-8')
-	texto = texto #.encode("utf-8")
+	mifichero = open(year + "_" + str(time.time()) + '.txt', 'w', encoding='utf-8')
+	texto = texto#.encode("utf-8")
 	mifichero.write(texto)
 	mifichero.close()
 
