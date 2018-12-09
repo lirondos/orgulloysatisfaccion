@@ -94,10 +94,9 @@ if __name__ == '__main__':
     corpus = Corpus('C:/Users/Elena/Documents/GitHub/orgulloysatisfaccion/discursos')
     cfd = nltk.ConditionalFreqDist((target, fileid[:4]) for fileid in corpus.corpus.fileids() for w in corpus.corpus.words(fileid) for target in ['europeo', 'terrorismo', 'dios', 'españoles','democracia', 'libertad', 'franco'] if w.lower().startswith(target))
     cfd.plot()
-'''
+
     print(corpus.documents())
     print(corpus.longest_words())
     print(corpus.most_frequent_content_words())
     print(corpus.most_frequent_bigrams())
-'''
 
