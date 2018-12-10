@@ -1,23 +1,37 @@
 import markovify
-from os import listdir
-from os.path import isfile, join
+from corpus import Corpus
+import re
 
-discursos_path = "C:/Users/Elena/Documents/GitHub/orgulloysatisfaccion/discursos"
-# Get raw text as string.
-discursos = [f for f in listdir(discursos_path) if isfile(join(discursos_path, f))]
-text = ""
-for discurso in discursos:
-    f = open(discursos_path+"/"+discurso, 'r', encoding='utf-8')
-    text = text + f.read()
-    f.close()
+def get_training_text(corpus, from_paragraph, to_paragraph):
+    training_text = ""
+    opening_par = []
+    for key, speech in corpus.speeches.items():
+        opening_par.append(speech.par[from_paragraph:to_paragraph])
+    for par in opening_par:
+        for sent in par:
+            for chain in sent:
+                #print(chain)
+                clean_chain = [element for element in chain if element != u'\u200b']
+                clean_sentence = " ".join(clean_chain)
+                clean_sentence = re.sub(r' ([,;\.])',r'\1', clean_sentence)
+                training_text = clean_sentence + " " + training_text
+    return training_text
 
-# Build the model.
-text_model = markovify.Text(text)
+def get_markovian_text(training_text, n):
+    text_model = markovify.Text(training_text)
+    my_string = ""
+    for n in range(n):
+        my_string = text_model.make_short_sentence(140, tries=200) + " " + text_model.make_sentence(tries=200) + " " + my_string
+    return my_string
 
-# Print five randomly-generated sentences
-for i in range(5):
-    print(text_model.make_sentence())
+corpus = Corpus([])
+training_opening = get_training_text(corpus, 0, 2)
+training_body = get_training_text(corpus, 2, -4)
+training_end = get_training_text(corpus, -4, -1)
 
-# Print three randomly-generated sentences of no more than 140 characters
-for i in range(3):
-    print(text_model.make_short_sentence(140))
+markovian_speech =  get_markovian_text(training_opening , 2) + "\n" + get_markovian_text(training_body , 6) + "\n" + get_markovian_text(training_end , 3)
+
+print(markovian_speech)
+
+
+

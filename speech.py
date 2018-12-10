@@ -1,9 +1,6 @@
 import nltk
-import os
-from os import listdir
-from os.path import isfile, join
 import spacy
-from es_lemmatizer import lemmatize
+# from es_lemmatizer import lemmatize
 from nltk.collocations import ngrams
 from spacy.lang.es.stop_words import STOP_WORDS
 
@@ -30,7 +27,7 @@ STOP_WORDS.add('cuya')
 
 
 nlp = spacy.load('es', disable=['parser', 'ner'])
-nlp.add_pipe(lemmatize, after="tagger")
+# nlp.add_pipe(lemmatize, after="tagger")
 
 
 class Speech:
@@ -39,19 +36,12 @@ class Speech:
         self.tokens = words
         self.sents = sents
         self.par = par
-        self.lemmatized_text, self.tagged_text = lemmatize_tag_text(text)
+        #self.lemmatized_text, self.tagged_text = lemmatize_tag_text(text)
         self.text = nltk.Text(words)
         self.year = year
         self.king = king
         self.half = half
         self.period = period
-    """
-    def get_year(self):
-        return self.year
-
-    def words(self):
-        return self.text.tokens
-    """
 
     def word_appearances(self, word):
         return self.tokens.count(word)
@@ -59,12 +49,11 @@ class Speech:
     def length(self):
         return len(self.text.tokens)
 
-
-    def collocations(self):
-        return self.text.collocations()
-
     def concordance(self, word):
         return self.text.concordance(word)
+
+    def similar(self, word):
+        return self.text.similar(word)
     
     def content_words(self):
        return [word.lower() for word in self.tokens if word.isalpha() and word.lower() not in STOP_WORDS]
@@ -118,27 +107,26 @@ class Speech:
         freqdist = nltk.FreqDist(content_trigrams)
         return freqdist.most_common()
 
+    def dispersion_plot(self, my_words):
+        self.text.dispersion_plot(my_words)
+
+    def speech_to_dict(self):
+        speech_dict = dict()
+        speech_dict['year'] = self.year
+        speech_dict['half'] = self.half
+        speech_dict['king'] = self.king
+        speech_dict['period'] = self.period
+        speech_dict['text'] = self.raw_text
+        return speech_dict
+
+
 
 def lemmatize_tag_text(text):
-    doc = nlp(text)
+    doc = nlp(text.encode('utf-8').decode('utf-8'))
     lemmas = [token.lemma_ for token in doc]
     tagged_words = [token.text + '/' + token.pos_ for token in doc]
-    lemmatized_text = " ".join(lemmas)
+    lemmatized_text = str(" ".join(lemmas))
     tagged_text = " ".join(tagged_words)
-    return lemmatized_text, tagged_text
-
-def lemmatize_tag_text2(sents):
-    lemmatized_text = ""
-    tagged_text = ""
-    flat_list = [item for sublist in sents for item in sublist]
-    text = " ".join(flat_list)
-    doc = nlp(text)
-    lemmas = [token.lemma_ for token in doc]
-    tagged_words = [token.text +'/'+ token.pos_ for token in doc]
-    lemmatized_par = " ".join(lemmas)
-    tagged_par = " ".join(tagged_words)
-    lemmatized_text = lemmatized_text + lemmatized_par
-    tagged_text = tagged_text + tagged_par
     return lemmatized_text, tagged_text
 
 
