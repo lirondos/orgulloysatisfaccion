@@ -4,8 +4,7 @@ import scattertext as st
 import spacy
 from spacy.lang.es.stop_words import STOP_WORDS
 
-STOP_WORDS.add('de+el')
-STOP_WORDS.add('a+el')
+
 nlp = spacy.load('es')
 
 def create_corpus(category, speeches_df):
@@ -41,10 +40,10 @@ def get_visualization(category, my_corpus):
 
 if __name__ == '__main__':
 
+
     my_corpus = Corpus([])
     categories = ['period', 'king', 'half']
     for category in categories:
         get_visualization(category, my_corpus)
-
 
 

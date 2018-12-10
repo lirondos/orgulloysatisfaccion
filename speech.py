@@ -110,6 +110,18 @@ class Speech:
     def dispersion_plot(self, my_words):
         self.text.dispersion_plot(my_words)
 
+    def frequencies(self):
+        fd = nltk.FreqDist(self.text)
+        return fd.most_common(50)
+
+    def frequency(self, word):
+        fd = nltk.FreqDist(self.text)
+        return fd[word]
+
+    def hapaxes(self):
+        fd = nltk.FreqDist(self.text)
+        return fd.hapaxes()
+
     def speech_to_dict(self):
         speech_dict = dict()
         speech_dict['year'] = self.year

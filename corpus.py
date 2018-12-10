@@ -62,15 +62,35 @@ def get_period(year):
     elif(year>=2008):
         return "Recession"
 
+def create_corpus(first_year, last_year):
+    files = []
+    for year in range(first_year, last_year + 1):
+        file_name = str(year) + '.txt'
+        files.append(file_name)
+    corpus = Corpus(files)
+    return corpus
+
 
 if __name__ == '__main__':
-    my_corpus_transicion = Corpus(['1975.txt','1976.txt','1977.txt','1978.txt','1979.txt','1980.txt'])
+    corpus_trasition = create_corpus(1975, 1981)
+    corpus_socialism = create_corpus(1982, 1995)
+    corpus_bubble = create_corpus(1996, 2008)
+    corpus_recession = create_corpus(2009, 2017)
+    print(corpus_trasition.speech.frequencies())
+    print(corpus_trasition.speech.frequency('noche'))
+    print(corpus_trasition.speech.hapaxes())
+    print(corpus_trasition.speech.most_frequent_bigrams())
+    print(corpus_socialism.speech.most_frequent_bigrams())
+    print(corpus_bubble.speech.most_frequent_bigrams())
+    print(corpus_recession.speech.most_frequent_bigrams())
+
+
     #print(my_corpus_transicion.speech.most_frequent_trigrams())
     #print(my_corpus_transicion.speech.most_frequent_bigrams())
     #print(my_corpus_transicion.speech.concordance('patria'))
     #print(my_corpus_transicion.speech.similar('España'))
     #print(my_corpus_transicion.speech.most_frequent_content_words())
-
+"""
     my_corpus = Corpus([])
     print(my_corpus.speech.concordance('Generalísimo'))
     print(my_corpus.speech.most_frequent_trigrams())
@@ -81,4 +101,5 @@ if __name__ == '__main__':
     my_corpus.printGraph(['españa', 'democracia'])
 
     my_corpus.speech.text.dispersion_plot(["España", "Europa", "terrorismo", "Dios"])
+"""
 
