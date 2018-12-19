@@ -1,48 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/corpus.py" line="140" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0bf3b7be-0852-4c80-8fe3-57eb44753a88" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/1977.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1978.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1979.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1980.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1981.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1982.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1983.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1984.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1985.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1986.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1987.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1988.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1989.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1990.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1991.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1992.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1993.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1994.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1995.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1996.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1997.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1998.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1999.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2000.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2001.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2002.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2003.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2004.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2005.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2006.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2007.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2008.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2009.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2010.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2011.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2012.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2013.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2014.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2015.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2016.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/orgulloysatisfaccion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/orgulloysatisfaccion.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/corpus.py" beforeDir="false" afterPath="$PROJECT_DIR$/corpus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/visualization_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/visualization_Bubble.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/visualization_Juan Carlos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/visualization_Recession.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/visualization_Socialism.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/graphs/visualization_Transition.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/speech.py" beforeDir="false" afterPath="$PROJECT_DIR$/speech.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speeches/2009.txt" beforeDir="false" afterPath="$PROJECT_DIR$/speeches/2009.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speeches/2010.txt" beforeDir="false" afterPath="$PROJECT_DIR$/speeches/2010.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speeches/2011.txt" beforeDir="false" afterPath="$PROJECT_DIR$/speeches/2011.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speeches/2012.txt" beforeDir="false" afterPath="$PROJECT_DIR$/speeches/2012.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/speeches/2013.txt" beforeDir="false" afterPath="$PROJECT_DIR$/speeches/2013.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,59 +29,151 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/orgulloysatisfaccion$speech.coverage" NAME="speech Coverage Results" MODIFIED="1544381052911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/orgulloysatisfaccion$scattertext.coverage" NAME="scattertext Coverage Results" MODIFIED="1543594489638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/orgulloysatisfaccion$scatter.coverage" NAME="scatter Coverage Results" MODIFIED="1543691207748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/orgulloysatisfaccion$corpus.coverage" NAME="corpus Coverage Results" MODIFIED="1545241409158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/orgulloysatisfaccion$visualize.coverage" NAME="visualize Coverage Results" MODIFIED="1544551624152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/orgulloysatisfaccion$analysis.coverage" NAME="analysis Coverage Results" MODIFIED="1541529395677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/orgulloysatisfaccion$markov.coverage" NAME="markov Coverage Results" MODIFIED="1544416317402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-384419169">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.13" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.13" value="3" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.16" value="1" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="1" />
+          <entry key="csv" value="6" />
+          <entry key="frases_markovianas" value="2" />
+          <entry key="html" value="4" />
+          <entry key="png" value="4" />
+          <entry key="py" value="23" />
+          <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="1" />
+          <entry key="HTML" value="4" />
+          <entry key="Image" value="4" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="Python" value="22" />
+          <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="17" />
-          <entry key="analysis" value="600" />
-          <entry key="py" value="346" />
+          <entry key="Python Console" value="93" />
+          <entry key="analysis" value="675" />
+          <entry key="csv" value="5" />
+          <entry key="dummy" value="9" />
+          <entry key="frases_markovianas" value="1" />
+          <entry key="py" value="12121" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="963" />
+          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="Python" value="12889" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/analysis.py">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/crawler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="79">
-              <caret line="94" column="225" selection-start-line="94" selection-start-column="225" selection-end-line="94" selection-end-column="225" />
+            <state>
+              <caret column="14" selection-start-column="5" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/corpus.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-704">
+              <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
               <folding>
-                <element signature="e#34#45#0" expanded="true" />
-                <marker date="1541791552385" expanded="true" signature="1213:1222" ph="..." />
-                <marker date="1541791552385" expanded="true" signature="1213:1287" ph="..." />
+                <element signature="e#0#25#0" expanded="true" />
+                <marker date="1545241409141" expanded="true" signature="1093:1098" ph="..." />
+                <marker date="1545241409141" expanded="true" signature="3355:3358" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/speech.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-583">
+              <caret line="124" column="19" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/visualize.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>text</find>
+      <find>s</find>
+      <find>stop_</find>
+      <find>guardar</find>
+      <find>collo</find>
+      <find>unique</find>
+      <find>print</find>
+      <find>hapax</find>
+      <find>tag_</find>
+      <find>get_t</find>
+      <find>word_appearances</find>
+      <find>frequency</find>
+      <find>frequency(</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -111,7 +181,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/frases_markovianas" />
+        <option value="$PROJECT_DIR$/index.csv" />
+        <option value="$PROJECT_DIR$/scattertext.py" />
+        <option value="$PROJECT_DIR$/scatter.py" />
         <option value="$PROJECT_DIR$/analysis.py" />
+        <option value="$PROJECT_DIR$/discursos.py" />
+        <option value="$PROJECT_DIR$/markov.py" />
+        <option value="$PROJECT_DIR$/visualize.py" />
+        <option value="C:/Program Files (x86)/Python37-32/Lib/site-packages/Pattern-2.6-py3.7.egg/pattern/text/__init__.py" />
+        <option value="$PROJECT_DIR$/speech.py" />
+        <option value="$PROJECT_DIR$/corpus.py" />
       </list>
     </option>
   </component>
@@ -132,6 +212,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,14 +224,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../assignment4-lirondos" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -164,11 +246,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.corpus">
     <configuration name="analysis" type="PythonConfigurationType" factoryName="Python">
       <module name="orgulloysatisfaccion" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -184,9 +269,131 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="corpus" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="orgulloysatisfaccion" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/corpus.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="markov" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="orgulloysatisfaccion" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/markov.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scatter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="orgulloysatisfaccion" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scatter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="speech" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="orgulloysatisfaccion" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/speech.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="visualize" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="orgulloysatisfaccion" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/visualize.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.analysis" />
+      <item itemvalue="Python.scatter" />
+      <item itemvalue="Python.speech" />
+      <item itemvalue="Python.corpus" />
+      <item itemvalue="Python.visualize" />
+      <item itemvalue="Python.markov" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.analysis" />
+        <item itemvalue="Python.corpus" />
+        <item itemvalue="Python.visualize" />
+        <item itemvalue="Python.markov" />
+        <item itemvalue="Python.speech" />
+        <item itemvalue="Python.scatter" />
       </list>
     </recent_temporary>
   </component>
@@ -203,31 +410,63 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.07611336" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2769231" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3285968" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" weight="0.714032" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39964476" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50040483" side_tool="true" weight="0.3285968" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.11900533" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49959514" weight="0.34991118" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.2242915" />
+      <window_info anchor="right" id="Database" order="4" weight="0.32955465" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23562753" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49959514" weight="0.3285968" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49959514" visible="true" weight="0.22557727" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3285968" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50040483" side_tool="true" weight="0.3285968" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3285968" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" sideWeight="0.49959514" visible="true" weight="0.6749556" />
+      <window_info anchor="bottom" id="Python Console" order="12" sideWeight="0.49959514" weight="0.41740674" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.92388666" />
       <window_info anchor="right" id="Database" order="4" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -235,15 +474,94 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frases_markovianas.txt" />
+    <entry file="file://$PROJECT_DIR$/Visualization.html" />
+    <entry file="file://$PROJECT_DIR$/index.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="42" column="92" selection-start-line="42" selection-start-column="92" selection-end-line="42" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frases_markovianas" />
+    <entry file="file://$PROJECT_DIR$/Visualization_Transition.html" />
+    <entry file="file://$PROJECT_DIR$/scatter.py" />
+    <entry file="file://$PROJECT_DIR$/Visualization_Bubble.html" />
+    <entry file="file://$PROJECT_DIR$/radiography.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="4" column="331" selection-start-line="4" selection-start-column="331" selection-end-line="4" selection-end-column="331" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/markov.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Roaming/Python/Python37/site-packages/pattern3/text/tree.py" />
+    <entry file="file://$PROJECT_DIR$/myGraph.png" />
+    <entry file="file://$PROJECT_DIR$/dataframe.csv">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="425">
+          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="94" column="225" selection-start-line="94" selection-start-column="225" selection-end-line="94" selection-end-column="225" />
+        <state relative-caret-position="250">
+          <caret line="95" column="10" selection-start-line="95" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/crawler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visualize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speech.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-583">
+          <caret line="124" column="19" selection-start-line="124" selection-start-column="8" selection-end-line="124" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/corpus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-704">
+          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
           <folding>
-            <element signature="e#34#45#0" expanded="true" />
-            <marker date="1541791552385" expanded="true" signature="1213:1222" ph="..." />
-            <marker date="1541791552385" expanded="true" signature="1213:1287" ph="..." />
+            <element signature="e#0#25#0" expanded="true" />
+            <marker date="1545241409141" expanded="true" signature="1093:1098" ph="..." />
+            <marker date="1545241409141" expanded="true" signature="3355:3358" ph="..." />
           </folding>
         </state>
       </provider>

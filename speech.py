@@ -3,6 +3,12 @@ import spacy
 # from es_lemmatizer import lemmatize
 from nltk.collocations import ngrams
 from spacy.lang.es.stop_words import STOP_WORDS
+import pandas as pd
+import networkx as nx
+import matplotlib.pyplot as plt
+
+import seaborn as sns
+import pandas as pd
 
 STOP_WORDS.add('a')
 STOP_WORDS.add('y')
@@ -33,27 +39,19 @@ nlp = spacy.load('es', disable=['parser', 'ner'])
 class Speech:
     def __init__(self, text, words, sents, par, year, king, half, period):
         self.raw_text = text
-        self.tokens = words
+        self.tokens = [word.lower() for word in words if word.isalpha()]
+        self.types = list(set(self.tokens))
         self.sents = sents
         self.par = par
-        #self.lemmatized_text, self.tagged_text = lemmatize_tag_text(text)
+        self.tagged_text, self.lemmatized_text = tag_text(text)
         self.text = nltk.Text(words)
         self.year = year
         self.king = king
         self.half = half
         self.period = period
 
-    def word_appearances(self, word):
-        return self.tokens.count(word)
-
     def length(self):
         return len(self.text.tokens)
-
-    def concordance(self, word):
-        return self.text.concordance(word)
-
-    def similar(self, word):
-        return self.text.similar(word)
     
     def content_words(self):
        return [word.lower() for word in self.tokens if word.isalpha() and word.lower() not in STOP_WORDS]
@@ -79,6 +77,10 @@ class Speech:
         longest_list = [word for word in set(self.tokens) if len(word) == longest_len]
         longest_list.sort()
         return longest_list
+
+    def frequencies(self):
+        fd = nltk.FreqDist(self.text)
+        return fd.most_common(50)
 
     def most_frequent_content_words(self):
         """Return a list with the 25 most frequent content words and their
@@ -107,20 +109,27 @@ class Speech:
         freqdist = nltk.FreqDist(content_trigrams)
         return freqdist.most_common()
 
-    def dispersion_plot(self, my_words):
-        self.text.dispersion_plot(my_words)
-
-    def frequencies(self):
+    def hapaxes(self):
         fd = nltk.FreqDist(self.text)
-        return fd.most_common(50)
+        return fd.hapaxes()
+
 
     def frequency(self, word):
         fd = nltk.FreqDist(self.text)
         return fd[word]
 
-    def hapaxes(self):
-        fd = nltk.FreqDist(self.text)
-        return fd.hapaxes()
+
+    def word_appearances(self, word):
+        return self.tokens.count(word)
+
+    def concordance(self, word):
+        return self.text.concordance(word)
+
+    def similar(self, word):
+        return self.text.similar(word)
+
+    def dispersion_plot(self, my_words):
+        self.text.dispersion_plot(my_words)
 
     def speech_to_dict(self):
         speech_dict = dict()
@@ -131,17 +140,38 @@ class Speech:
         speech_dict['text'] = self.raw_text
         return speech_dict
 
+    def get_matrix(self):
+        content_words = sorted(list(set(self.content_words())))
+        df = pd.DataFrame(columns=content_words, index=content_words)
+        df[:] = int(0)
+        for par in self.par:
+            par_list = [word for word in par_to_simple_list(par) if word in content_words]
+            print(par_list)
+            for word1 in par_list:
+                for word2 in par_list:
+                    print(word1)
+                    print(word2)
+                    df[word1][word2] += 1
+                    df[word2][word1] += 1
+        df.to_csv('dataframe.csv')
 
 
-def lemmatize_tag_text(text):
+
+def par_to_simple_list(paragraph):
+    par = []
+    for sent in paragraph:
+        par_to_text = " ".join(sent)
+        par.extend(par_to_text.split())
+    return par
+
+
+
+def tag_text(text):
     doc = nlp(text.encode('utf-8').decode('utf-8'))
     lemmas = [token.lemma_ for token in doc]
     tagged_words = [token.text + '/' + token.pos_ for token in doc]
     lemmatized_text = str(" ".join(lemmas))
     tagged_text = " ".join(tagged_words)
-    return lemmatized_text, tagged_text
+    return tagged_text, lemmatized_text
 
 
-def get_tokens(text):
-    tokens = nltk.word_tokenize(text)
-    return tokens

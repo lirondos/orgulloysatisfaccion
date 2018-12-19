@@ -1,7 +1,11 @@
 from speech import Speech
 import nltk
 from nltk.corpus import PlaintextCorpusReader
+import os
+import numpy as np
+
 import matplotlib.pyplot as plt
+
 plt.style.use('_classic_test')
 
 class Corpus:
@@ -12,6 +16,15 @@ class Corpus:
             self.corpus = PlaintextCorpusReader('./speeches', files)
         self.speech = Speech(self.corpus.raw(), self.corpus.words(), self.corpus.sents(),self.corpus.paras(), None, None, None, None)
         self.speeches = build_speeches_dict(self.corpus)
+        self.years = [int(year.split('.')[0]) for year in self.corpus.fileids()]
+        complementary_years = list(set(os.listdir("./speeches")) - set([str(years) + '.txt' for years in self.years]))
+        if not files:
+            self.complementary = None
+            self.unique_words = None
+        else:
+            self.complementary = Complementary_Corpus(complementary_years)
+            self.unique_words = [word for word in self.speech.tokens if word not in self.complementary.speech.tokens]
+
 
     def to_speeches_list(self):
         speeches_list = []
@@ -22,6 +35,50 @@ class Corpus:
     def printGraph(self, my_words):
         cfd = nltk.ConditionalFreqDist((target, fileid) for fileid in self.speeches.keys() for w in self.speeches[fileid].tokens for target in my_words if w.lower() == target)
         cfd.plot()
+
+    def get_files(self):
+        return self.corpus.fileids()
+
+    def unique_words_freq(self):
+        if self.unique_words is None:
+            return "The corpus contains all speeches, so no comparison can be made"
+        else:
+            return nltk.FreqDist(self.unique_words).most_common()
+
+    def unique_bigrams(self):
+        return list(set(self.speech.bigrams()) - set(self.complementary.speech.bigrams()))
+
+    def radiography(self):
+        print("Lexical data for period from " + str(self.years[0]) + " to " + str(self.years[-1]))
+        print(str(len(self.years)) + " total speeches")
+        print(str(len(self.corpus.words())) + " total words")
+        print(str(len(self.corpus.words()) / len(self.get_files())) + " words per speech")
+        print("Frequency distribution:")
+        print(self.speech.frequencies())
+        print("Content words frequency distribution:")
+        print(self.speech.most_frequent_content_words())
+        print("Hapaxes:")
+        print(self.speech.hapaxes())
+        print("Unique words frequency distribution:")
+        print(self.unique_words_freq())
+        print("Most frequent content bigrams:")
+        print(self.speech.most_frequent_bigrams())
+        print("Most frequent content trigrams:")
+        print(self.speech.most_frequent_trigrams())
+        print("#######################################")
+
+
+
+
+
+class Complementary_Corpus(Corpus):
+    def __init__(self, files):
+        Corpus.corpus = PlaintextCorpusReader('./speeches', files)
+        Corpus.speech = Speech(self.corpus.raw(), self.corpus.words(), self.corpus.sents(), self.corpus.paras(), None, None, None, None)
+        Corpus.speeches = None
+        Corpus.years = [int(year.split('.')[0]) for year in self.corpus.fileids()]
+        #print(sorted(Corpus.speech.types))
+        Corpus.complementary = None
 
 
 def build_speeches_dict(corpus):
@@ -71,35 +128,15 @@ def create_corpus(first_year, last_year):
     return corpus
 
 
+
 if __name__ == '__main__':
-    corpus_trasition = create_corpus(1975, 1981)
-    corpus_socialism = create_corpus(1982, 1995)
-    corpus_bubble = create_corpus(1996, 2008)
-    corpus_recession = create_corpus(2009, 2017)
-    print(corpus_trasition.speech.frequencies())
-    print(corpus_trasition.speech.frequency('noche'))
-    print(corpus_trasition.speech.hapaxes())
-    print(corpus_trasition.speech.most_frequent_bigrams())
-    print(corpus_socialism.speech.most_frequent_bigrams())
-    print(corpus_bubble.speech.most_frequent_bigrams())
-    print(corpus_recession.speech.most_frequent_bigrams())
+    general = Corpus([])
+    general.radiography()
+
+    my_corpora = [create_corpus(1975, 1981), create_corpus(1982, 1995), create_corpus(1996, 2008), create_corpus(2009, 2017)]
+    for corpus in my_corpora:
+        corpus.radiography()
 
 
-    #print(my_corpus_transicion.speech.most_frequent_trigrams())
-    #print(my_corpus_transicion.speech.most_frequent_bigrams())
-    #print(my_corpus_transicion.speech.concordance('patria'))
-    #print(my_corpus_transicion.speech.similar('España'))
-    #print(my_corpus_transicion.speech.most_frequent_content_words())
-"""
-    my_corpus = Corpus([])
-    print(my_corpus.speech.concordance('Generalísimo'))
-    print(my_corpus.speech.most_frequent_trigrams())
-    print(my_corpus.speech.most_frequent_bigrams())
-    print(my_corpus.speech.concordance('patria'))
-    most_freq_tuples = (my_corpus.speech.most_frequent_content_words())
-    #print(most_freq_tuples)
-    my_corpus.printGraph(['españa', 'democracia'])
 
-    my_corpus.speech.text.dispersion_plot(["España", "Europa", "terrorismo", "Dios"])
-"""
 
