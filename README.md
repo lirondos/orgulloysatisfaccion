@@ -28,4 +28,5 @@ This project requires the following libraries:
 * matplotlib
 
 The name of the GitHub project (_Orgullo y Satisfacción_, literally "Pride and satisfaction") is a humorous nod to the common belief (and even national joke)that  all  royal speeches contain the phrase _me llena de orgullo y satisfaccióon_ (which would translate to ”it is with great pride and satisfaction”).  
-Fun fact: contrary to common belief, the phrase *orgullo y satisfacción appears only once in the entire corpus
+
+Fun fact: contrary to common belief, the phrase _orgullo y satisfacción_ appears only once in the entire corpus
