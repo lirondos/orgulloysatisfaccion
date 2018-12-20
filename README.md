@@ -1,7 +1,7 @@
 # Orgullo y satisfacción
 A corpus with the king's Christmas speech. 
 
-For otivations, technical details, etc please see the project report. 
+For motivations, technical details, etc please see the project report. 
 
 This project consists of: 
 * A crawler.py script. This was the script that was used to extract the speeches from http://www.casareal.es. The URLs of the speeches are in this file. Please, note that this process took several tries and was humanly supervised (due to timeout errors from the server and to label each speech with its corresponding year).

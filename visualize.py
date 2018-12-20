@@ -7,7 +7,8 @@ nlp = spacy.load('es')
 
 """
 This scripts interact with Corpus class and scattertext library to produce html visualization of the corpus.
-The produced html files can be found in the visualization folder
+The produced html files can be found in the visualization folder.
+This proccess can take a while to be done.
 """
 
 
