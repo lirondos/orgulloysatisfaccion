@@ -2,13 +2,17 @@ from speech import Speech
 import nltk
 from nltk.corpus import PlaintextCorpusReader
 import os
-import numpy as np
-
 import matplotlib.pyplot as plt
-
 plt.style.use('_classic_test')
 
+
 class Corpus:
+    """
+    The Corpus class creates a corpus, that is a set of speeches to be analyzed.
+    The constructor takes a list of files from the speeches folder as parameter.
+    Example. ["1977.txt", "1980.txt"]
+    If the list is empty, the corpus is created with the complete collection of speeches (from 1975 to 2017)
+    """
     def __init__(self, files):
         if not files:
             self.corpus = PlaintextCorpusReader('./speeches', '.*')
@@ -22,9 +26,8 @@ class Corpus:
             self.complementary = None
             self.unique_words = None
         else:
-            self.complementary = Complementary_Corpus(complementary_years)
+            self.complementary = ComplementaryCorpus(complementary_years)
             self.unique_words = [word for word in self.speech.tokens if word not in self.complementary.speech.tokens]
-
 
     def to_speeches_list(self):
         speeches_list = []
@@ -32,23 +35,35 @@ class Corpus:
             speeches_list.append(speech.speech_to_dict())
         return speeches_list
 
-    def printGraph(self, my_words):
+    def print_graph(self, my_words):
+        """
+        :param my_words: list of words whose frequency is to be plotted
+        :return: a frequency plot
+        """
         cfd = nltk.ConditionalFreqDist((target, fileid) for fileid in self.speeches.keys() for w in self.speeches[fileid].tokens for target in my_words if w.lower() == target)
         cfd.plot()
 
     def get_files(self):
+        """
+        :return: list of files in the Corpus object
+        """
         return self.corpus.fileids()
 
     def unique_words_freq(self):
+        """
+        :return: the words in the corpus object that are unique to that corpus
+        (i.e., these words dont appear in the rest of the speeches)
+        """
         if self.unique_words is None:
             return "The corpus contains all speeches, so no comparison can be made"
         else:
             return nltk.FreqDist(self.unique_words).most_common()
 
-    def unique_bigrams(self):
-        return list(set(self.speech.bigrams()) - set(self.complementary.speech.bigrams()))
-
     def radiography(self):
+        """
+        The method that returns the lexical radiography of the corpus
+        :return: prints lexical analysis from the corpus
+        """
         print("Lexical data for period from " + str(self.years[0]) + " to " + str(self.years[-1]))
         print(str(len(self.years)) + " total speeches")
         print(str(len(self.corpus.words())) + " total words")
@@ -68,20 +83,26 @@ class Corpus:
         print("#######################################")
 
 
-
-
-
-class Complementary_Corpus(Corpus):
+class ComplementaryCorpus(Corpus):
+    """
+    The ComplementaryCorpus is a type of corpus.
+    The ComplementaryCorpus is created when the corpus only contains a selection of speeches (not all of them)
+    The Complementary Corpus is a corpus that contains the speeches not included in the current corpus.
+    """
     def __init__(self, files):
         Corpus.corpus = PlaintextCorpusReader('./speeches', files)
         Corpus.speech = Speech(self.corpus.raw(), self.corpus.words(), self.corpus.sents(), self.corpus.paras(), None, None, None, None)
         Corpus.speeches = None
         Corpus.years = [int(year.split('.')[0]) for year in self.corpus.fileids()]
-        #print(sorted(Corpus.speech.types))
         Corpus.complementary = None
 
 
 def build_speeches_dict(corpus):
+    """
+    Transform a corpus into a dictionary of speeches. This method is used in the visualization process
+    :param corpus:
+    :return: speeches dictionary
+    """
     speeches = dict()
     for fileid in corpus.fileids():
         text = corpus.raw(fileid)
@@ -98,18 +119,34 @@ def build_speeches_dict(corpus):
 
 
 def get_king(year):
+    """
+    Sets the king of the speech based on the year the speech was delivered.
+    :param year:
+    :return: name of the king
+    """
     if (year < 2014):
         return "Juan Carlos"
     else:
         return "Felipe"
 
 def get_half(year):
+    """
+    Sets the half of time when the speech was delivered.
+    :param year:
+    :return: 1 (for first half) and 2 (second half)
+    """
     if (year < 1996):
         return "1"
     else:
         return "2"
 
+
 def get_period(year):
+    """
+    Sets the historical period of the speech based on the year it was delivered
+    :param year:
+    :return: Historical period
+    """
     if year < 1982:
         return "Transition"
     elif (year>=1982 and year<1996):
@@ -120,6 +157,12 @@ def get_period(year):
         return "Recession"
 
 def create_corpus(first_year, last_year):
+    """
+    Method to call the corpus constructor to build a corpus for a consecutive set of years
+    :param first_year:
+    :param last_year: included
+    :return: the created corpus
+    """
     files = []
     for year in range(first_year, last_year + 1):
         file_name = str(year) + '.txt'
@@ -127,9 +170,16 @@ def create_corpus(first_year, last_year):
     corpus = Corpus(files)
     return corpus
 
-
-
 if __name__ == '__main__':
+    """
+    This main method:
+    - creates a corpus with all the speeches in the folder
+    - calls the radiography method to get lexical information from the created corpus
+    
+    After that, a corpus object is created for every historical period of the corpus (four corpus, one for every period)
+    The radiography method is called on each of them. 
+    The result for this main method can be found on the output.txt file
+    """
     general = Corpus([])
     general.radiography()
 
