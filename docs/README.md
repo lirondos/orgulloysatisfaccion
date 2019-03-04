@@ -12,10 +12,10 @@ Visualizaciones sobre los discursos de Navidad del rey desde 1975 hasta 2018.
 
 
 ## ¿Qué es esto?
-Esto es un pequeño ejercicio de cacharreo lingüístico. El punto de partida han sido los 43 discursos de Navidad del rey, que han sido extraídos de la web de la Casa Real. El objetivo es poner esta colección de 43 discursos bajo el microscopio de la lingüística para medir de forma empírica cómo ha cambiado el vocabulario de los discursos desde el año 1975 hasta hoy y representarlo gráficamente.    
+Esto es un pequeño proyecto de lingüística de corpus. El punto de partida han sido los 43 discursos de Navidad del rey, que han sido extraídos de la web de la Casa Real. El objetivo es poner esta colección de 43 discursos bajo el microscopio de la lingüística para medir de forma empírica cómo ha cambiado el vocabulario de los discursos desde el año 1975 hasta hoy y representarlo gráficamente.    
 
 ## ¿Qué representa cada gráfica?
-Hay muchas mediciones posibles que se pueden extraer de un conjunto de 43 discursos. En el caso de estas gráficas, cada gráfica representa una comparación. Por ejemplo, podemos comparar el léxico de los discursos de Juan Carlos con los discursos de Felipe y medir sus diferencias de vocabulario. O podemos partir la colección en grupos temporales y comparar los discursos de un grupo con los de otro. En este caso, las gráficas se han obtenido atendiendo a los siguientes criterios: 
+Hay muchas mediciones posibles que se pueden extraer de un conjunto de 43 discursos. En el caso de estas gráficas, cada gráfica representa una comparación. Por ejemplo, podemos comparar el léxico de los discursos de Juan Carlos con los discursos de Felipe y medir sus diferencias de vocabulario. O podemos partir la colección en intervalos temporales y comparar los discursos de un grupo con los de otro. En este caso, las gráficas se han obtenido atendiendo a los siguientes criterios: 
 * Atendiendo al rey que da el discurso: discursos de Juan Carlos vs discursos de Felipe. 
 * Atendiendo a la época: primera mitad cronológica (desde 1975 hasta 1996) vs segunda mitad cronológica (1997-2018)
 * Atendiendo a la situación social/política/económica: para este criterio, hemos dividido la colección de discursos en cuatro periodos: transición (1975-1981), años del socialismo (1981-1995), años de la burbuja (1996-2007) y recesión económica (2008-2018). 
@@ -27,7 +27,7 @@ Por ejemplo, cojamos la gráfica de que enfrenta los [discursos de Juan Carlos y
 
 Al pinchar en las palabras de la gráfica nos aparecerán los contextos en los que ha aparecido la palabra en cuestión y las diferencias de frecuencia entre un rey el otro. 
 
-El resto de gráficas comparativas funcionan de la misma manera. La [gráfica con los discursos de la transición](https://lirondos.github.io/orgulloysatisfaccion/tfidf/juan_carlos.html), por ejemplo, representa las frecuencias de términos en los discursos de la transicion en comparación con los discursos de todos los demás años. Y así sucesivamente con el resto de etapas. A la hora de mirar el gráfico, merece la pena fijarse tanto en las palabras anormalmente frecuentes (esquinas superior izquierda e inferior derecha), pero también aquellas que se mantienen siempre habituales (esquina superior derecha) o las que tienen frecuencias parecidas.
+El resto de gráficas comparativas funcionan de la misma manera. La [gráfica con los discursos de la transición](https://lirondos.github.io/orgulloysatisfaccion/tfidf/transicion.html), por ejemplo, representa las frecuencias de términos en los discursos de la transicion en comparación con los discursos de todos los demás años. Y así sucesivamente con el resto de etapas. A la hora de mirar el gráfico, merece la pena fijarse tanto en las palabras anormalmente frecuentes (esquinas superior izquierda e inferior derecha), pero también aquellas que se mantienen siempre habituales (esquina superior derecha) o las que tienen frecuencias parecidas (eje diagonal).
 
 ## ¿Qué información es la que está representada?
 Estas gráficas representan la frecuencia de las palabras en los discursos. Sin embargo, ha habido un cierto preprocesamiento y una poderación en la obtención de los valores. En primer lugar, la representación ignora las palabras huecas como preposiciones, artículos, conjunciones, etc. 
@@ -38,8 +38,7 @@ Además, la frecuencia que se mide no es simplemente un recuento de palabras sin
 La visualización está hecha mediante la librería de Python [scattertext](https://github.com/JasonKessler/scattertext) y la librería [spaCy](https://spacy.io/). 
 
 ## ¿Se pueden ver los datos, los scripts o los discursos en bruto en algún lado?
-Estas visualizaciones forman parte de un proyecto más grande en el que he estado trabajando este semestre para una asignatura. El repositorio del proyecto está [aquí](https://github.com/lirondos/orgulloysatisfaccion). Los discursos en `txt`están en la carpeta `speeches`. 
+Estas visualizaciones forman parte de un proyecto mayor que hice para la asignatura "Introduction to NLP in Python" en la Universidad de Brandeis. El repositorio con el código del proyecto está [aquí](https://github.com/lirondos/orgulloysatisfaccion). Los discursos en `txt`están en la carpeta `speeches`. El archivo `report.pdf` contiene el informe con los datos, metodología y conclusiones del proyecto.
 
-Como divertimento curioso, la carpeta `markovian_speeches` contiene discursos de Navidad del rey generados automáticamente mediante cadenas de Markov con la librería `markovify`.
 
 
