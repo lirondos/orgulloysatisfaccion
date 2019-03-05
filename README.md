@@ -2,8 +2,8 @@
 This project is a corpus analysis of the Christmas speeches delivered by the King of Spain from 1975 to 2018. This project was done for the course "Introduction to NLP in Python" at Brandeis University. 
  
 For motivations, technical details, etc please see the project `report.pdf` file. 
-HTML visualizations available at: https://lirondos.github.io/orgulloysatisfaccion/ [in Spanish].
-For information about the traditional Christmas speech: https://en.wikipedia.org/wiki/Christmas_Eve_National_Speech.
+- HTML visualizations available at: https://lirondos.github.io/orgulloysatisfaccion/ [in Spanish].
+- For information about the traditional Christmas speech: https://en.wikipedia.org/wiki/Christmas_Eve_National_Speech.
 
 This project contains the following files: 
 * The `speeches` folder contains the files with the Christmas speeches from 1975 to 2018 in `txt` format.
