@@ -1,5 +1,5 @@
 # Orgullo y satisfacción
-This project is a corpus analysis of the Christmas speeches delivered by the King of Spain from 1975 to 2018. This project was done for the course "Introduction to NLP in Python" at Brandeis University. 
+This project is a corpus analysis of the Christmas speeches delivered by the King of Spain from 1975 to 2018. It is built using `NLTK`, `spaCy`, `scattertext` and `markovify` libraries. This project was done for the course "Introduction to NLP in Python" at Brandeis University. 
  
 For motivations, technical details, etc please see the project `report.pdf` file. 
 - HTML visualizations available at: https://lirondos.github.io/orgulloysatisfaccion/ [in Spanish].
